@@ -1,0 +1,35 @@
+{
+  "name": "simple-email-client",
+  "version": "1.0.1",
+  "description": "Simple Email Client built with JavaFX and SMTP Mail.",
+  "author": "Joshua LegecyPanda Masunda",
+  "license": "ISC",
+  "main": "index.js",
+  "preferGlobal": true,
+  "files": ["jdeploy-bundle"],
+  "bin": {
+    "Simple-Email-Client": "jdeploy-bundle/jdeploy.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "jdeploy": {
+    "jar": "target/Simple-Email-Client.jar",
+    "mainClass": "legecy.panda.Main",
+    "javaVersion": "21",
+    "javafx": true,
+    "icon": "src/main/resources/legecy/panda/images/icon.png",
+    "title": "Simple Email Client",
+    "jdk": true,
+    "generateLegacyBundles": false,
+    "stripJavaFXFiles": false,
+    "platforms": ["win", "linux", "mac"]
+  },
+  "dependencies": {
+    "command-exists-promise": "^2.0.2",
+    "node-fetch": "2.6.7",
+    "tar": "^4.4.8",
+    "yauzl": "^2.10.0",
+    "shelljs": "^0.8.4"
+  }
+}
